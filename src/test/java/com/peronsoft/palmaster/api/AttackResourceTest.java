@@ -20,8 +20,8 @@ public class AttackResourceTest extends JerseyTest {
      */
     @Test
     public void testGetIt() {
-        final String responseMsg = target().path("attackResource").request().get(String.class);
+        final String responseMsg = target().path("palmaster/attack/handaxe/150/16").request().get(String.class);
 
-        assertEquals("Hello, Heroku!", responseMsg);
+        assertEquals("17EK", responseMsg);
     }
 }
