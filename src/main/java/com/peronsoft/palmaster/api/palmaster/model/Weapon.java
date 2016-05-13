@@ -19,7 +19,7 @@ public class Weapon {
     }
 
     public String getAttack(String roll, String armor){
-        return weaponRows.get(roll).getValues().get(Integer.valueOf(armor));
+        return weaponRows.get(roll).getValues().get(Integer.valueOf(new Integer(Integer.parseInt(armor)-1).toString()));
     }
 
     public String getWeaponName() {
