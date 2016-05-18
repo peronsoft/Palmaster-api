@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("palmaster")
+@Path("palmaster/attack")
 public class AttackResource {
 
     /**
@@ -22,7 +22,7 @@ public class AttackResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @Path ("attack/{weaponName}/{attackPower}/{armor}")
+    @Path ("{weaponName}/{attackPower}/{armor}")
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt(@PathParam("weaponName") String weaponName, @PathParam("attackPower") String attackPower , @PathParam("armor") String armor) {
         return WeaponService.getInstance().getValue(weaponName, attackPower, armor);
